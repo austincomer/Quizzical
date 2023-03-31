@@ -1,0 +1,38 @@
+.results-container {
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-card {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    max-width: 1280px;
+    box-shadow: 1px 1px 1px 7px #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-card > h2 {
+    color: #222;
+    font-size: clamp(12px, 4.5vw, 28px);
+}
+
+.result-icon {
+    margin-left: 15px;
+}
+
+@media only screen and (max-width: 640px) {
+    .results-container {
+        height: 140px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .results-container {
+        height: 110px;
+    }
+}

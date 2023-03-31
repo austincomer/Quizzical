@@ -1,33 +1,24 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './components/Header'
+import StartQuiz from './components/StartQuiz'
+import Quiz from './components/Quiz'
+import he from 'he'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+const [startGame, setStartGame] = useState(false)
 
+function handleStartGame() {
+  setStartGame(true)
+}
+  
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Quiz Time</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className='app-container'>
+      {startGame && <Header />}
+      <main>
+        {startGame ? <Quiz /> : <StartQuiz handleStartGame={handleStartGame}/>}
+      </main>
     </div>
   )
 }
