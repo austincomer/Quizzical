@@ -17,8 +17,6 @@ function Quiz() {
     const [restart, setRestart] = useState(0)
     const [isLoading, setIsLoading] = useState(true)
 
-    console.log(quizData)
-
     // Fetch API Trivia Data
     function fetchQuizData() {
         fetch(`https://opentdb.com/api.php?amount=5&type=multiple`)
@@ -99,7 +97,6 @@ function Quiz() {
 
     // Restart Quiz
     function restartQuiz() {
-        console.log('Restart')
         setScore(0)
         setCheckAnswers(false) 
         setRestart(prevState => prevState + 1)
