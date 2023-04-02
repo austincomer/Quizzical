@@ -17,14 +17,21 @@
     animation-iteration-count: infinite;
   }
   
-  span:nth-child(1) {
+  .loading > span:nth-child(1) {
+    background-color: #ffb3c2;
     animation-delay: 0.1s;
   }
-  span:nth-child(2) {
+  .loading > span:nth-child(2) {
+    background-color: #99b9ff;
+    animation-delay: 0.15s;
+  }
+  .loading > span:nth-child(3) {
+    background-color: #78ffd1;
     animation-delay: 0.2s;
   }
-  span:nth-child(3) {
-    animation-delay: 0.3s;
+  .loading > span:nth-child(4) {
+    background-color: #f0ffa6;
+    animation-delay: 0.25s;
   }
   
   @keyframes bounce {

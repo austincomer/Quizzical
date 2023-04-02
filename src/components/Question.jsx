@@ -3,31 +3,25 @@ import './Question.css'
 
 function Question(props) {
 
-
-    // Create answer option elements.
     const answerOptionEls = props.answers.map(answer => {
-        
         let className = ''
-
-        // Correct answer
+        // correct answer
         if (props.checkAnswers && answer.isCorrect && !answer.isSelected) {
             className = 'option-btn correct-answer no-hover'
         } 
-        // Guess is correct
+        // guess is correct
         else if (props.checkAnswers && answer.isCorrect && answer.isSelected) {
             className = 'option-btn correct-guess no-hover'
         } 
-        // Wrong guess
+        // wrong guess
         else if (props.checkAnswers && !answer.isCorrect && answer.isSelected) {
             className = 'option-btn incorrect-guess no-hover'
         } 
-        // Not guess and not correct
+        // not guess and not correct
         else if (props.checkAnswers && !answer.isCorrect && !answer.isSelected) {
             className = 'option-btn not-selected no-hover'
         } 
-
-
-        // Select an option styling
+        // selected styling
         else if (answer.isSelected) {
             className = 'option-btn is-selected'
         } else {
@@ -39,8 +33,9 @@ function Question(props) {
                 key={answer.id}
                 className={className}
                 onClick={() => props.handleSelectAnswer(props.id, answer.id)}
-                disabled={props.checkAnswers}
-            >{answer.option}</button>
+                disabled={props.checkAnswers}>
+                {answer.option}
+            </button>
         )
     })
 

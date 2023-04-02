@@ -56,7 +56,6 @@ function Quiz() {
     // Call fetch once on first page render
     useEffect(() => {
         fetchQuizData()
-        console.log('effect ran')
     }, [restart])
 
     // Hanlde the answer select by flipping isSelect to true and useing that to change styles. 

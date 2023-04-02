@@ -1,82 +1,33 @@
-
-
 body {
     font-family: 'Karla', sans-serif;
     background-color: #F5F7FB;
-    color: #ffffff;
+    color: #646c89;
     text-shadow: .5em .5em 1em rgba(0, 0, 0, .1);
     overflow-x: hidden;
-
-    /* Animate background */
-    width: 100%;
-    height: 100%;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    background-size: 300% 300%;
-    background-color: #3b4371;
-    background-image: linear-gradient(-45deg, #f3904f, #3b4371 );
-    -webkit-animation: AnimateBG 30s ease infinite;
-            animation: AnimateBG 30s ease infinite;
+    background-color: #e8e7ed;
 }
-
-/* Animate background */
-@-webkit-keyframes AnimateBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  @keyframes AnimateBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 
 body::-webkit-scrollbar {
     display: none;
 }
-
-
-/* Global Styles */
-.wire {
-    border: 1px solid seagreen;
-}
-
 
 h1 {
     font-size: 4.5rem;
 }
 
 h2 {
-    color: #ffffff;
-    font-size: clamp(20px, 4vw, 24px);
+    color: #646c89;
+    font-size: clamp(20px, 4vw, 2px);
     font-family: 'Inter', sans-serif;
     font-weight: 600;
 }
 
 h3 {
-    color: #ffffff;
+    color: #646c89;
     font-size: 1.5rem;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
 }
-
-
-
-/* App Component Styles */
 
 main {
     padding: 2.5em 1.25em;
